@@ -14,6 +14,7 @@ $Compile = @(
     "/std:c++17"          # c++17 standard mode
     "/O2"                 # level 2 optimizations
     "/D_HAS_EXCEPTIONS=0" # disable exceptions for STL and CRT
+    "/Fa" + @(Join-Path $ProjectRoot "build\debug\obj\DOD.asm") # generate assembly 
 ) -join " "
 
 $Link = @(
